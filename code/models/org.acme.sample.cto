@@ -3,23 +3,20 @@
  */
 namespace org.acme.sample
 
-asset Sensor identified by teamID {
-  //create your Team asset model
-  o String teamID
+asset Product identified by ProductIdentifier {
+
+  o String ProductIdentifier
+  o String ProductName
+  o Double ProductCode
+  o DateTime ScanDate
+  o String ScanId
 }
 
-transaction SetSensorTemp {
+transaction SetScanId {
   //create your SetSensorTemp transaction model
+  --> Product product
+  o Double ScanId
   
 }
 
-transaction ChangeThermostatTemp {
-  //create your ChangeThermostatTemp transaction model
-  
-}
-
-transaction CompareWeather{
-  //create your CompareWeather transaction model
-  
-}
 
